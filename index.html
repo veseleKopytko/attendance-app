@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veselé kopýtko</title>
+    <link rel="icon" type="image/jpg" href="/favicon.jpg">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- Main Page -->
+    <div id="mainPage" class="page active">
+      <header>
+        <h1>Veselé kopýtko</h1>
+      </header>
+      <header id="loading">
+        <h1>Načítání...</h1>
+      </header>
+
+      <!-- This Week Section -->
+      <section id="thisWeek" class="time-section">
+        <h2 id="thisWeek-title"></h2>
+        <div id="thisWeek-content" class="dates-list"></div>
+      </section>
+
+      <!-- Next Week Section -->
+      <section id="nextWeek" class="time-section">
+        <h2 id="nextWeek-title"></h2>
+        <div id="nextWeek-content" class="dates-list"></div>
+      </section>
+
+      <!-- Following Week Section -->
+      <section  id="followingWeek" class="time-section">
+        <h2  id="followingWeek-title"></h2>
+        <div id="followingWeek-content" class="dates-list"></div>
+      </section>
+
+      <!-- Fourth Week Section -->
+      <section  id="week4" class="time-section">
+        <h2  id="week4-title"></h2>
+        <div id="week4-content" class="dates-list"></div>
+      </section>
+      <!-- Fifth Week Section -->
+      <section  id="week5" class="time-section">
+        <h2  id="week5-title"></h2>
+        <div id="week5-content" class="dates-list"></div>
+      </section>
+    </div>
+
+    <!-- Details Page -->
+    <div id="detailsPage" class="page">
+      <header>
+        <button class="back-button">←</button>
+        <h1 id="detailsDate"></h1>
+      </header>
+      <header>
+        <h2 id="detailsDetails"></h2>
+      </header>
+      <div id="spotsList" class="spots-list"> </div>
+      <button id="releaseSpotBtn" class="primary-button">Omluvit Dítě</button>
+    </div>
+
+    <!-- Release Form Page -->
+    <div id="releaseFormPage" class="page">
+      <header>
+        <button class="back-button">←</button>
+        <h1>Omluvit Dítě</h1>
+      </header>
+      <form id="releaseForm">
+        <div class="form-group">
+          <label for="kidName">Jméno a příjmení dítěte</label>
+          <input type="text" id="kidName" name="kidName" required>
+        </div>
+        <div class="form-group">
+          <label class="toggle">
+            <input type="checkbox" id="withLunch" name="withLunch" >
+            <span class="toggle-label">s obědem</span>
+          </label>
+        </div>
+        <button type="submit" class="primary-button" id="releaseFormSubmitButton">Omluvit</button>
+      </form>
+    </div>
+
+    <!-- Success Popup -->
+    <div id="successPopup" class="popup">
+      <div class="popup-content">
+        <p>Hotovo!</p>
+      </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

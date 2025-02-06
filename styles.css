@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.page.active {
+    display: block;
+    max-width: 800px;
+    margin: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 24px;
+}
+
+.back-button {
+    position: absolute;
+    left: 0;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.time-section {
+    margin-bottom: 24px;
+}
+
+.time-section h2 {
+    color: #888;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.dates-list .date-row {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.date-row:active {
+    background-color: #2a2a2a;
+}
+
+.date-info {
+    flex: 1;
+}
+
+.date-info .day {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.date-info .date {
+    color: #888;
+    font-size: 14px;
+}
+
+.availability {
+    text-align: right;
+}
+
+.availability .spots,
+.availability .lunches {
+    font-size: 14px;
+    color: #888;
+}
+
+.spots-list {
+    margin-bottom: 24px;
+}
+
+.spot-item {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove-button {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.remove-button:disabled {
+    background-color: gray;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #888;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle input {
+    margin-right: 8px;
+}
+
+.primary-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.primary-button:active {
+    background-color: #0056b3;
+}
+
+.primary-button:disabled {
+    background-color: gray;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup-content {
+    background-color: #1e1e1e;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
