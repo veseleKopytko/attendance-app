@@ -19,15 +19,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 function renderMainPage() {
-  renderDateSection('thisWeek', attendanceData.thisWeek);
-  renderDateSection('nextWeek', attendanceData.nextWeek);
-  renderDateSection('followingWeek', attendanceData.followingWeek);
-  renderDateSection('week4', attendanceData.week4);
-  renderDateSection('week5', attendanceData.week5);
+  Object.keys(attendanceData).forEach(key => renderDateSection(key, attendanceData[key]))
   setupEventListeners();
 }
 
 function renderDateSection(sectionId, dates) {
+  if (dates.length === 0) return
   const title = document.getElementById(`${sectionId}-title`);
   const content = document.getElementById(`${sectionId}-content`);
   title.textContent = dates[0].weekText.toUpperCase();
